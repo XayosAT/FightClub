@@ -23,3 +23,15 @@ int Character::getHealth() {
     return health;
 }
 
+void Character::setHealth(int health) {
+    this->health = health;
+}
+
+void Character::setAbility(Ability ability, int index) {
+    abilities[index] = ability;
+}
+
+Ability Character::getAbility(int index) {
+    return abilities[index];
+}
+
