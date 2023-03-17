@@ -8,8 +8,7 @@
 
 int main() {
 
-    Smash smash;
-    smash.useAbility();
+    Game game;
 
     return 0;
 }

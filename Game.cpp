@@ -3,5 +3,20 @@
 //
 
 #include "Game.h"
-#include <iostream>
-#include "Character.h"
+
+
+Game::Game() {
+
+    ::srand(time(NULL));
+    Character *preCreatedCharacter1 = new Character("Joe", 100, "Dodge", "Stab" );
+    Character *preCreatedCharacter2 = new Character("Bob", 100, "Smash", "Grab");
+    characters.push_back(preCreatedCharacter1);
+    characters.push_back(preCreatedCharacter2);
+}
+
+Game::~Game() {
+    for (int i = 0; i < characters.size(); ++i) {
+        delete characters[i];
+    }
+    cout << "Game destroyed" << endl;
+}

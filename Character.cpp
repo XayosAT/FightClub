@@ -3,13 +3,19 @@
 //
 
 #include "Character.h"
-#include "Decision.h"
-#include <iostream>
 
-Character::Character(string name, int health){
+
+Character::Character(string name, int health, string ability1, string ability2) {
     this->name = name;
     this->health = health;
+    abilities[0] = Ability(ability1);
+    abilities[1] = Ability(ability2);
+    for (int i = 0; i < 4; i++) {
+        statusEffects[i] = 0;
+    }
+
 }
+
 
 string Character::getName() const {
     return name;
@@ -27,11 +33,10 @@ void Character::setHealth(int health) {
     this->health = health;
 }
 
-void Character::setAbility(Ability ability, int index) {
-    abilities[index] = ability;
-}
-
 Ability Character::getAbility(int index) {
     return abilities[index];
 }
 
+void Character::setStatusEffect(int index, int value) {
+    statusEffects[index] = value;
+}

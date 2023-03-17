@@ -8,6 +8,12 @@
 #include <vector>
 #include "Decision.h"
 #include <iostream>
+#include "Ability.h"
+#include <string>
+#include <stdio.h>      /* printf, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
+
 using namespace std;
 
 class Game {
@@ -16,7 +22,7 @@ public:
     Game();
     virtual ~Game();
 private:
-    vector<Character> characters;
+    vector<Character*> characters;
 };
 
 
