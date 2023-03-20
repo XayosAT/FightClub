@@ -5,7 +5,22 @@
 //possible Abilities: Smash, Stab, Grab, Block, Dodge
 
 #include "Ability.h"
+Ability::Ability() {
+}
 
+Ability::Ability(string name) {
+    this->name = name;
+}
+
+string Ability::getName() {
+    return name;
+}
+
+Ability::~Ability() {
+
+}
+
+/*
 void Ability::useAbility(Character *user, Character *target) {
     if (name == "Smash") {
         useSmash(target);
@@ -88,3 +103,4 @@ bool Ability::blockedOrDodged(Character *target) {
     }
     return false;
 }
+*/

@@ -14,4 +14,4 @@ add_executable(FightClub
         Decision.h
         Game.cpp
         Game.h
-        main.cpp)
+        main.cpp Fight.cpp)

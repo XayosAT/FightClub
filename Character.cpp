@@ -40,3 +40,23 @@ Ability Character::getAbility(int index) {
 void Character::setStatusEffect(int index, int value) {
     statusEffects[index] = value;
 }
+
+int Character::getStatusEffect(int index) {
+    return statusEffects[index];
+}
+
+int Character::getWins() {
+    return wins;
+}
+
+void Character::setWins(int wins) {
+    this->wins = wins;
+}
+
+int Character::getLosses() {
+    return losses;
+}
+
+void Character::setLosses(int losses) {
+    this->losses = losses;
+}
